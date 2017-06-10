@@ -27,7 +27,7 @@ template "/etc/nginx/nginx.conf" do
 end
 
 # monit pass through
-if @node[:monit_address]
+if node[:monit_address]
   template "/etc/nginx/sites-enabled/monit" do
     owner "deploy"
     group "deploy"
